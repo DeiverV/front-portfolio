@@ -9,50 +9,86 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
+import { Route as DesignSystemRouteRouteImport } from './routes/design-system/route'
+import { Route as DashboardRouteRouteImport } from './routes/dashboard/route'
+import { Route as LandingIndexRouteImport } from './routes/_landing/index'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
+const DesignSystemRouteRoute = DesignSystemRouteRouteImport.update({
+  id: '/design-system',
+  path: '/design-system',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRouteRoute = DashboardRouteRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LandingIndexRoute = LandingIndexRouteImport.update({
+  id: '/_landing/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
+  '/dashboard': typeof DashboardRouteRoute
+  '/design-system': typeof DesignSystemRouteRoute
+  '/': typeof LandingIndexRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
+  '/dashboard': typeof DashboardRouteRoute
+  '/design-system': typeof DesignSystemRouteRoute
+  '/': typeof LandingIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
+  '/dashboard': typeof DashboardRouteRoute
+  '/design-system': typeof DesignSystemRouteRoute
+  '/_landing/': typeof LandingIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/dashboard' | '/design-system' | '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/dashboard' | '/design-system' | '/'
+  id: '__root__' | '/dashboard' | '/design-system' | '/_landing/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
+  DashboardRouteRoute: typeof DashboardRouteRoute
+  DesignSystemRouteRoute: typeof DesignSystemRouteRoute
+  LandingIndexRoute: typeof LandingIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
+    '/design-system': {
+      id: '/design-system'
+      path: '/design-system'
+      fullPath: '/design-system'
+      preLoaderRoute: typeof DesignSystemRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_landing/': {
+      id: '/_landing/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+      preLoaderRoute: typeof LandingIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
+  DashboardRouteRoute: DashboardRouteRoute,
+  DesignSystemRouteRoute: DesignSystemRouteRoute,
+  LandingIndexRoute: LandingIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

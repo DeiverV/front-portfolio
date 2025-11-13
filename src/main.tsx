@@ -4,9 +4,10 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 import * as TanStackQueryProvider from './integrations/tanstack-query/root-provider.tsx'
 
-// Import the generated route tree
-import { routeTree } from './routeTree.gen.ts'
+import { routeTree } from './routeTree.gen'
+import './i18n/i18n'
 import './styles.css'
+import './animations.css'
 
 const TanStackQueryProviderContext = TanStackQueryProvider.getContext()
 
