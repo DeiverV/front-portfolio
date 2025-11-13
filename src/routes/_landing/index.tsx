@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Header } from './-components/header'
 import { Hero } from './-sections/hero'
-import { About } from './-components/about'
+import { About } from './-sections/about'
 
 export const Route = createFileRoute('/_landing/')({
   component: Landing,
