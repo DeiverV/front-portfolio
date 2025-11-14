@@ -26,7 +26,7 @@ export const SeeMore = () => {
           value={{
             size: '20',
             style: {
-              fill: 'var(--color-secondary)',
+              fill: 'white',
             },
           }}
         >

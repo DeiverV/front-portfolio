@@ -66,6 +66,7 @@ export const CustomizeStylesMenu = () => {
       <button
         className="h-10 w-10 p-2 rounded-full bg-neutral flex items-center justify-center animate-[shake_1.5s_ease-in-out_infinite]"
         onClick={() => setIsOpen(!isOpen)}
+        aria-label="Customize styles"
       >
         <LuPaintbrushVertical size={28} />
       </button>

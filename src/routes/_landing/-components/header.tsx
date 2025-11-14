@@ -25,12 +25,10 @@ export const Header = () => {
   return (
     <header
       className={`fixed w-full top-0 z-50 flex items-center justify-between px-[5%] h-16 backdrop-blur-md transition-colors duration-300 ${
-        scrolled ? ' bg-secondary/10  backdrop-blur-2xl' : ' bg-transparent'
+        scrolled ? ' bg-black/5  backdrop-blur-2xl' : ' bg-transparent'
       }`}
     >
-      <figure
-        className={`font-semibold text-4xl transition-colors duration-300 ${scrolled ? 'text-white' : 'text-secondary'}`}
-      >
+      <figure className="font-semibold text-4xl transition-colors duration-300 text-white">
         .d
       </figure>
 
@@ -39,7 +37,7 @@ export const Header = () => {
           value={{
             size: '20',
             style: {
-              fill: scrolled ? 'white' : 'var(--color-secondary)',
+              fill: 'white',
             },
           }}
         >
@@ -47,9 +45,7 @@ export const Header = () => {
             <Link
               {...link}
               key={link.to}
-              className={`flex gap-1 items-center font-bold text-shadow-xs transition-colors duration-300 text-lg ${
-                scrolled ? 'text-white text-shadow-black/50' : 'text-secondary text-shadow-white/20'
-              }`}
+              className="flex gap-1 items-center font-bold text-shadow-2xs transition-colors duration-300 text-lg text-white text-shadow-black/20"
             >
               {link.label}
             </Link>
