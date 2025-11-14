@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next'
 import { experiences } from '../-shared.data'
 
 export const Experience = () => {
+  const { t } = useTranslation('landing')
   return (
     <article
       className="flex flex-col justify-center items-center "
@@ -16,16 +18,13 @@ export const Experience = () => {
             />
           </figure>
           <div className="grid">
-            <h3 className="text-white font-bold">Experiencia</h3>
+            <h3 className="text-white font-bold">{t('experience.title')}</h3>
             <hr className="border-white" />
-            <p className="text-white md:text-lg">
-              Hola! Estas son las empresas con las que he trabajado y las
-              tecnologias más importantes que usé allí.
-            </p>
+            <p className="text-white md:text-lg">{t('experience.subtitle')}</p>
           </div>
         </header>
 
-        <section className="mt-10 grid gap-4 w-full border-l-4 border-white pl-4">
+        <section className="mt-10 grid gap-4 w-full pb-34">
           {experiences.map((experience) => (
             <section key={experience.company} className="select-none">
               <h6 className="text-white font-bold">{experience.company}</h6>

@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { FaGithub, FaLinkedin, FaPaperclip } from 'react-icons/fa'
 import { RedirectionIcon } from '../-components/redirection-icon'
 
 export const Hero = () => {
+  const { t } = useTranslation('landing')
   const heroRef = useRef<HTMLElement>(null)
   const [progress, setProgress] = useState(0)
 
@@ -32,7 +34,7 @@ export const Hero = () => {
         </h1>
 
         <h2 className="text-secondary font-semibold text-xl sm:text-4xl text-center font-styled">
-          Frontend Developer
+          {t('hero.role')}
         </h2>
         <figure
           className="my-2 rounded-full bg-secondary z-10 pointer-events-none"

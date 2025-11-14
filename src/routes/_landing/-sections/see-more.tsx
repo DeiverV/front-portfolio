@@ -1,8 +1,11 @@
 import { IconContext } from 'react-icons'
+import { useTranslation } from 'react-i18next'
 import { Link } from '@tanstack/react-router'
 import { internalLinks } from '../-shared.data'
 
 export const SeeMore = () => {
+  const { t } = useTranslation('landing')
+  
   return (
     <article
       className="h-screen flex flex-col justify-center items-center bg-primary shadow-[0px_0px_40px_40px_var(--color-primary)] gap-5"
@@ -11,11 +14,11 @@ export const SeeMore = () => {
       <h3 className="text-6xl md:text-9xl font-bold text-secondary font-styled text-center">
         👀
         <br />
-        ¿Quieres ver más?
+        {t('seeMore.title')}
       </h3>
 
       <p className="text-secondary font-bold md:text-lg text-center">
-        Mira lo que prepare en las otras secciones!
+        {t('seeMore.description')}
       </p>
 
       <nav className="flex gap-2">

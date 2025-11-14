@@ -1,5 +1,32 @@
 {
-  "landing": {},
+  "common": {
+    "language": "Idioma",
+    "theme": "Tema",
+    "primaryColor": "Color Primario",
+    "borderRadius": "Redondeo de Bordes"
+  },
+  "landing": {
+    "hero": {
+      "role": "Desarrollador Frontend"
+    },
+    "about": {
+      "greeting": "Hola, soy Deiber Verano 👋",
+      "description": "Soy un desarrollador frontend apasionado por crear interfaces rápidas, elegantes y funcionales. Me encanta transformar ideas en experiencias digitales fluidas, cuidando cada detalle desde el rendimiento hasta la accesibilidad. Disfruto trabajar con React, TypeScript y arquitecturas modernas. He desarrollado proyectos que integran diseño, lógica de negocio y una experiencia de usuario limpia e intuitiva.",
+      "tools": "Stack"
+    },
+    "experience": {
+      "title": "Experiencia",
+      "subtitle": "¡Hola! Estas son las empresas con las que he trabajado y las tecnologías más importantes que usé allí."
+    },
+    "seeMore": {
+      "title": "¿Quieres ver más?",
+      "description": "¡Mira lo que preparé en las otras secciones!"
+    },
+    "footer": {
+      "copyright": "© 2025 Deiber Verano",
+      "sourceCodeText": "¡Mira el código de esta web!"
+    }
+  },
   "dashboard": {},
   "design-system": {}
 }

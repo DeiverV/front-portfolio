@@ -2,6 +2,7 @@ import i18n from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 import es from './messages/es.json'
+import en from './messages/en.json'
 
 export type Lang = 'en' | 'es'
 
@@ -23,6 +24,7 @@ i18n
     supportedLngs: ['en', 'es'],
     resources: {
       es: { ...es },
+      en: { ...en },
     },
   })
 

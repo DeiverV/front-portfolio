@@ -1,0 +1,32 @@
+{
+   "common": {
+    "language": "Language",
+    "theme": "Theme",
+    "primaryColor": "Primary Color",
+    "borderRadius": "Border Radius"
+  },
+  "landing": {
+    "hero": {
+      "role": "Frontend Developer"
+    },
+    "about": {
+      "greeting": "Hi, I'm Deiber Verano 👋",
+      "description": "I'm a frontend developer passionate about creating fast, elegant and functional interfaces. I love transforming ideas into smooth digital experiences, taking care of every detail from performance to accessibility. I enjoy working with React, TypeScript and modern architectures. I've developed projects that integrate design, business logic and a clean and intuitive user experience.",
+      "tools": "Tools"
+    },
+    "experience": {
+      "title": "Experience",
+      "subtitle": "Hello! These are the companies I've worked with and the most important technologies I used there."
+    },
+    "seeMore": {
+      "title": "Want to see more?",
+      "description": "Check out what I prepared in the other sections!"
+    },
+    "footer": {
+      "copyright": "© 2025 Deiber Verano",
+      "sourceCodeText": "Check out the code for this website!"
+    }
+  },
+  "dashboard": {},
+  "design-system": {}
+}

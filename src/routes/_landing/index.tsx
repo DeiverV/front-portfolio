@@ -10,7 +10,7 @@ import { Seo } from './-seo'
 
 export const Route = createFileRoute('/_landing/')({
   component: () => (
-    <html>
+    <html lang="en">
       <Seo />
       <body>
         <Landing />

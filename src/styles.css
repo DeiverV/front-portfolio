@@ -39,7 +39,7 @@
   --font-sans: 'Poppins', sans-serif;
 
   --color-primary: #001bb7;
-  --color-secondary: #ff8040;
+  --color-secondary: #ff7000;
   --radius-default: 10px;
   --color-neutral: #f5f1dc;
   --color-text: #1e1e1e;
@@ -50,11 +50,11 @@
 }
 
 [data-theme-primary='green'] {
-  --color-primary: #00b728;
+  --color-primary: #0c6113;
 }
 
 [data-theme-primary='purple'] {
-  --color-primary: #5f00b7;
+  --color-primary: #38158a;
 }
 
 [data-theme-rounded='square'] {
@@ -99,6 +99,9 @@ body {
   * {
     font-family: var(--font-sans);
     color: var(--color-text);
+  }
+  button{
+    cursor: pointer;
   }
 
   h1 {

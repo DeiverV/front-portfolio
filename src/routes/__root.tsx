@@ -9,6 +9,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 import TanStackQueryDevtools from '../integrations/tanstack-query/devtools'
 
 import type { QueryClient } from '@tanstack/react-query'
+import { CustomizeStylesMenu } from '@/components/customize-styles-menu'
 
 interface MyRouterContext {
   queryClient: QueryClient
@@ -30,6 +31,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
           TanStackQueryDevtools,
         ]}
       />
+      <CustomizeStylesMenu />
     </>
   ),
   notFoundComponent: () => <Navigate to="/" />,
