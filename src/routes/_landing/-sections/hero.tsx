@@ -65,7 +65,7 @@ export const Hero = () => {
           />
 
           <RedirectionIcon
-            href="https://github.com/DeiverV"
+            href="https://drive.google.com/drive/folders/1OL3L4X1OTj0wIKTX6KR0Wxp5wSgayYPl?usp=sharing"
             icon={<FaPaperclip size={18} className="fill-white" />}
             label="CV"
           />
