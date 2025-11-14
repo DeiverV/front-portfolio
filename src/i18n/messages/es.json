@@ -3,7 +3,8 @@
     "language": "Idioma",
     "theme": "Tema",
     "primaryColor": "Color Primario",
-    "borderRadius": "Redondeo de Bordes"
+    "borderRadius": "Redondeo de Bordes",
+    "workingOnThis": " Hola! estoy trabajando en esto en este momento"
   },
   "landing": {
     "hero": {

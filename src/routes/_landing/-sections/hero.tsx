@@ -28,7 +28,7 @@ export const Hero = () => {
       ref={heroRef}
       className="h-screen grid place-items-center overflow-hidden bg-primary"
     >
-      <section className="animate-[fadeIn_2.5s_ease-in] z-10 grid px-8 place-items-center">
+      <section className="animate-[fadeIn_2s_ease-in] z-10 grid px-8 place-items-center">
         <h1 className="text-secondary font-semibold text-6xl sm:text-9xl text-center font-styled">
           Deiber Verano
         </h1>
@@ -36,7 +36,7 @@ export const Hero = () => {
         <h2 className="text-secondary font-semibold text-xl sm:text-4xl text-center font-styled">
           {t('hero.role')}
         </h2>
-        <figure
+        <object
           className="my-2 rounded-full bg-secondary z-10 pointer-events-none"
           style={{
             width: '12px',
@@ -46,7 +46,7 @@ export const Hero = () => {
             transition: 'transform 0.4s ease-out',
             aspectRatio: '1/1',
           }}
-        ></figure>
+        ></object>
 
         <nav
           className="flex gap-4 mt-4 justify-center flex-wrap"

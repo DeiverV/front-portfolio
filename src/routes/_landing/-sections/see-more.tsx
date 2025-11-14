@@ -34,6 +34,7 @@ export const SeeMore = () => {
             <Link
               {...link}
               key={link.to}
+              viewTransition
               className="flex gap-1 text-white border-white border rounded-default w-[150px] py-1 items-center justify-center font-semibold transition-colors text-lg"
             >
               {link.label}
