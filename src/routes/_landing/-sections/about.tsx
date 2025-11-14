@@ -73,7 +73,7 @@ export const About = () => {
         <h4 className="text-shadow-black text-shadow-lg font-bold font-styled text-7xl sm:text-9xl lg:text-[230px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white opacity-10 w-full text-center">
           Tools
         </h4>
-        <div className="flex justify-center max-h-[500px] overflow-y-auto h-full w-full flex-wrap py-8 rounded-2xl">
+        <div className="flex justify-center h-full w-full flex-wrap py-8 rounded-2xl">
           {items.map((item, index) => (
             <figure
               key={index}
