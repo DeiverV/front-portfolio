@@ -27,7 +27,7 @@ export const Experience = () => {
         <section className="mt-10 grid gap-4 w-full pb-34">
           {experiences.map((experience) => (
             <section key={experience.company} className="select-none">
-              <h6 className="text-white font-bold">{experience.company}</h6>
+              <p className="text-white font-bold text-lg">{experience.company}</p>
               <p className="text-white">{experience.role}</p>
               <p className="text-white">{experience.period}</p>
               <p className="text-white">

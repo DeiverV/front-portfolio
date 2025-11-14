@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { LuPaintbrushVertical } from 'react-icons/lu'
-import { MdDarkMode, MdLightMode } from 'react-icons/md'
 import { useTranslation } from 'react-i18next'
 import { i18nSetLang } from '@/i18n/i18n'
 
@@ -19,7 +18,7 @@ export const CustomizeStylesMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
   const { t } = useTranslation('common')
 
-  const [theme, setTheme] = useState<Theme>(() => {
+  const [theme] = useState<Theme>(() => {
     return (
       (localStorage.getItem('theme') as Theme | undefined) ||
       (document.body.getAttribute('data-theme') as Theme | undefined) ||
@@ -60,7 +59,7 @@ export const CustomizeStylesMenu = () => {
 
   return (
     <div
-      className="fixed bottom-12 right-12 z-50"
+      className="fixed bottom-4 right-4 md:bottom-12 md:right-12 z-50"
       aria-description="Customize styles"
     >
       <button
@@ -73,7 +72,7 @@ export const CustomizeStylesMenu = () => {
 
       {isOpen && (
         <div className="absolute bottom-10 right-10 bg-neutral rounded-default p-4">
-          <p className="font-bold">{t('theme')}</p>
+          {/* <p className="font-bold">{t('theme')}</p>
           <div className="flex gap-2">
             <button
               className="bg-primary rounded-default p-1"
@@ -87,7 +86,7 @@ export const CustomizeStylesMenu = () => {
             >
               <MdDarkMode size={24} className="fill-white" />
             </button>
-          </div>
+          </div> */}
 
           <p className="font-bold mt-2">{t('language')}</p>
           <div className="flex gap-2">
