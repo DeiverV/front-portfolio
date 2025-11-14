@@ -24,7 +24,7 @@ export const Hero = () => {
   return (
     <article
       ref={heroRef}
-      className="h-screen grid place-items-center overflow-hidden"
+      className="h-screen grid place-items-center overflow-hidden bg-primary"
     >
       <section className="animate-[fadeIn_4s_ease-in] z-10 grid px-8 place-items-center">
         <h1 className="text-secondary font-semibold text-6xl sm:text-9xl text-center font-styled">
@@ -70,7 +70,7 @@ export const Hero = () => {
         </nav>
       </section>
 
-      <figure className="flex absolute gap-8 justify-center flex-col h-[400px] aspect-square w-fit rounded-default p-4 bg-secondary/10 animate-[swing_1.5s_ease_infinite] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+      <figure className="flex absolute gap-8 justify-center flex-col h-[300px] sm:h-[400px] aspect-square w-fit rounded-default p-4 bg-secondary/10 animate-[swing_1.5s_ease_infinite] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
         <figure className="w-full h-full bg-black/40 absolute left-0 top-0 backdrop-blur-[2px] rounded-default animate-[fadeIn_4s_ease-in] z-20"></figure>
         <figure className="w-full h-full bg-black/80 absolute left-0 top-0 blur-[100px] rounded-default animate-[fadeIn_4s_ease-in]"></figure>
         <img

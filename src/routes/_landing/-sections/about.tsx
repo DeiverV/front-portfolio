@@ -52,10 +52,10 @@ export const About = () => {
 
   return (
     <article
-      className="bg-secondary min-h-screen flex flex-col justify-around gap-4 px-8 sm:px-[100px] lg:px-[250px] xl:px-[400px] pt-20 pb-8"
+      className="bg-secondary min-h-screen flex flex-col justify-around gap-12 px-8 sm:px-[100px] lg:px-[250px] xl:px-[400px] pt-20 pb-12"
       aria-label="Tech Stack"
     >
-      <section className="flex flex-col gap-2 border-4 rounded-default p-8 border-primary border-dashed pl-4">
+      <section className="flex flex-col gap-2 p-8 border-primary border-b-3 border-dashed pl-4">
         <h3 className="font-bold text-2xl sm:text-4xl text-white">
           Hola, soy Deiber Verano 👋
         </h3>
@@ -70,10 +70,10 @@ export const About = () => {
         </p>
       </section>
       <section className="relative h-[50%] flex items-center justify-center w-full">
-        <h4 className="text-shadow-black text-shadow-sm font-bold font-styled text-7xl sm:text-9xl lg:text-[200px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white w-full text-center">
-          Tech Stack
+        <h4 className="text-shadow-black text-shadow-lg font-bold font-styled text-7xl sm:text-9xl lg:text-[230px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white opacity-10 w-full text-center">
+          Tools
         </h4>
-        <div className="flex justify-center bg-black/60 z-10 h-full w-full flex-wrap py-8 rounded-2xl">
+        <div className="flex justify-center max-h-[500px] overflow-y-auto h-full w-full flex-wrap py-8 rounded-2xl">
           {items.map((item, index) => (
             <figure
               key={index}
@@ -84,7 +84,7 @@ export const About = () => {
                 alt={item.label}
                 className="w-10 h-10 sm:w-[50px] sm:h-[50px] "
               />
-              <p className="text-lg sm:text-xl font-semibold text-white z-10">
+              <p className="text-lg sm:text-xl font-semibold text-white">
                 {item.label}
               </p>
             </figure>
