@@ -79,6 +79,7 @@ export const Hero = () => {
           src="/deiber.webp"
           alt="Deiber Verano"
           className="rounded-default z-10"
+          fetchPriority='high'
         />
       </figure>
     </article>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { LuPaintbrushVertical } from 'react-icons/lu'
 import { useTranslation } from 'react-i18next'
+import { MdDarkMode, MdLightMode } from 'react-icons/md'
 import { i18nSetLang } from '@/i18n/i18n'
 
 const color = ['blue', 'green', 'purple']
@@ -18,7 +19,7 @@ export const CustomizeStylesMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
   const { t } = useTranslation('common')
 
-  const [theme] = useState<Theme>(() => {
+  const [theme, setTheme] = useState<Theme>(() => {
     return (
       (localStorage.getItem('theme') as Theme | undefined) ||
       (document.body.getAttribute('data-theme') as Theme | undefined) ||
@@ -63,7 +64,7 @@ export const CustomizeStylesMenu = () => {
       aria-description="Customize styles"
     >
       <button
-        className="h-10 w-10 p-2 rounded-full bg-neutral flex items-center justify-center animate-[shake_1.5s_ease-in-out_infinite]"
+        className="h-10 w-10 p-2 rounded-full bg-neutral border border-text flex items-center justify-center animate-[shake_1.5s_ease-in-out_infinite]"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Customize styles"
       >
@@ -71,22 +72,22 @@ export const CustomizeStylesMenu = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute bottom-10 right-10 bg-neutral rounded-default p-4">
-          {/* <p className="font-bold">{t('theme')}</p>
+        <div className="absolute bottom-10 right-10 bg-neutral rounded-default p-4 border border-text">
+          <p className="font-bold">{t('theme')}</p>
           <div className="flex gap-2">
             <button
-              className="bg-primary rounded-default p-1"
+              className="bg-neutral border border-text rounded-default p-1"
               onClick={() => setTheme('light')}
             >
-              <MdLightMode size={24} className="fill-white" />
+              <MdLightMode size={24} className="fill-text" />
             </button>
             <button
-              className="bg-primary rounded-default p-1"
+              className="bg-neutral border border-text rounded-default p-1"
               onClick={() => setTheme('dark')}
             >
-              <MdDarkMode size={24} className="fill-white" />
+              <MdDarkMode size={24} className="fill-text" />
             </button>
-          </div> */}
+          </div>
 
           <p className="font-bold mt-2">{t('language')}</p>
           <div className="flex gap-2">
@@ -121,7 +122,7 @@ export const CustomizeStylesMenu = () => {
             {Object.keys(rounded).map((item) => (
               <button
                 key={item}
-                className="h-8 w-8 rounded-full border-2 border-primary"
+                className="h-8 w-8 rounded-full border-2 border-text"
                 style={{ borderRadius: `${rounded[item]}px` }}
                 onClick={() => setRoundedValue(item)}
               />

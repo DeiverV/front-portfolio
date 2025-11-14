@@ -4,7 +4,8 @@
     "theme": "Theme",
     "primaryColor": "Primary Color",
     "borderRadius": "Border Radius",
-    "workingOnThis": "Hello! I'm working on this right now"
+    "workingOnThis": "Hello! I'm working on this right now",
+    "back": "Back"
   },
   "landing": {
     "hero": {
