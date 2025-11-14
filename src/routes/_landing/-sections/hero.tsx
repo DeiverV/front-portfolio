@@ -50,7 +50,7 @@ export const Hero = () => {
 
         <nav
           className="flex gap-4 mt-4 justify-center flex-wrap"
-          aria-label="Profile links"
+          aria-description="Profile links"
         >
           <RedirectionIcon
             href="https://www.linkedin.com/in/deiber-verano/"

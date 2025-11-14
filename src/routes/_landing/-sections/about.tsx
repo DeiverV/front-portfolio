@@ -6,7 +6,7 @@ export const About = () => {
   return (
     <article
       className="bg-secondary min-h-screen flex flex-col justify-around gap-12 pt-20 pb-12"
-      aria-label="Tech Stack"
+      aria-description="Tech Stack"
     >
       <section className="flex flex-col gap-2 p-8 border-primary border-b-3 border-dashed pl-4">
         <h3 className="font-bold text-2xl sm:text-4xl text-white text-shadow-xs text-shadow-black">

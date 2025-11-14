@@ -61,7 +61,7 @@ export const CustomizeStylesMenu = () => {
   return (
     <div
       className="fixed bottom-12 right-12 z-50"
-      aria-label="Customize styles"
+      aria-description="Customize styles"
     >
       <button
         className="h-10 w-10 p-2 rounded-full bg-neutral flex items-center justify-center animate-[shake_1.5s_ease-in-out_infinite]"

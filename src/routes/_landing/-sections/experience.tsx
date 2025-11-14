@@ -6,7 +6,7 @@ export const Experience = () => {
   return (
     <article
       className="flex flex-col justify-center items-center "
-      aria-label="Professional Experience"
+      aria-description="Professional Experience"
     >
       <section className="rounded-t-default bg-primary w-full flex flex-col justify-center items-center py-10 px-4 md:px-[50px] 2xl:px-[200px]">
         <header className="flex items-center flex-col md:flex-row gap-4">

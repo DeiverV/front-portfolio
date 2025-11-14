@@ -47,8 +47,8 @@ export const Header = () => {
             <Link
               {...link}
               key={link.to}
-              className={`flex gap-1 items-center font-semibold transition-colors duration-300 text-lg ${
-                scrolled ? 'text-white' : 'text-secondary'
+              className={`flex gap-1 items-center font-bold text-shadow-xs transition-colors duration-300 text-lg ${
+                scrolled ? 'text-white text-shadow-black/50' : 'text-secondary text-shadow-white/20'
               }`}
             >
               {link.label}
