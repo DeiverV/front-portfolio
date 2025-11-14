@@ -70,7 +70,7 @@ export const About = () => {
         </p>
       </section>
       <section className="relative h-[50%] flex items-center justify-center w-full">
-        <h4 className="text-shadow-black text-shadow-lg font-bold font-styled text-7xl sm:text-9xl lg:text-[230px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white opacity-10 w-full text-center">
+        <h4 className="text-shadow-black break-all text-shadow-lg font-bold font-styled text-7xl sm:text-9xl lg:text-[230px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white opacity-10 w-full text-center">
           Tools
         </h4>
         <div className="flex justify-center h-full w-full flex-wrap py-8 rounded-2xl">

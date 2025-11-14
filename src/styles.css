@@ -2,7 +2,10 @@
 
 @font-face {
   font-family: 'Amarante';
-  src: url('/fonts/Amarante-Regular.ttf');
+  src:
+    url('/fonts/amarante/Amarante-Regular.ttf'),
+    url('/fonts/amarante/amarante-regular-webfont.woff'),
+    url('/fonts/amarante/amarante-regular-webfont.woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -11,9 +14,21 @@
 @font-face {
   font-family: 'Poppins';
   src:
-    url('/fonts/Poppins-Light.ttf'), url('/fonts/Poppins-Regular.ttf'),
-    url('/fonts/Poppins-SemiBold.ttf'), url('/fonts/Poppins-ExtraBold.ttf'),
-    url('/fonts/Poppins-Black.ttf');
+    url('/fonts/poppins/Poppins-Light.ttf') format(truetype),
+    url('/fonts/poppins/poppins-light-webfont.woff') format(woff),
+    url('/fonts/poppins/poppins-light-webfont.woff2') format(woff2),
+    url('/fonts/poppins/Poppins-Regular.ttf') format(truetype),
+    url('/fonts/poppins/poppins-regular-webfont.woff') format(woff),
+    url('/fonts/poppins/poppins-regular-webfont.woff2') format(woff2),
+    url('/fonts/poppins/Poppins-SemiBold.ttf') format(truetype),
+    url('/fonts/poppins/poppins-semibold-webfont.woff') format(woff),
+    url('/fonts/poppins/poppins-semibold-webfont.woff2') format(woff2),
+    url('/fonts/poppins/Poppins-ExtraBold.ttf') format(truetype),
+    url('/fonts/poppins/poppins-extrabold-webfont.woff') format(woff),
+    url('/fonts/poppins/poppins-extrabold-webfont.woff2') format(woff2),
+    url('/fonts/poppins/Poppins-Black.ttf') format(truetype),
+    url('/fonts/poppins/poppins-black-webfont.woff') format(woff),
+    url('/fonts/poppins/poppins-black-webfont.woff2') format(woff2);
   font-weight: 300, 400, 600, 800, 900;
   font-style: normal;
   font-display: swap;

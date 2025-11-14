@@ -10,6 +10,7 @@ export const RedirectionIcon = ({ href, icon, label }: Props) => {
       href={href}
       rel="noreferrer"
       target="_blank"
+      aria-label='Redirect to social media'
       className="flex items-center bg-secondary p-2 rounded-default text-white gap-2 hover:bg-secondary/80 duration-150 ease-in-out w-[120px] justify-center"
     >
       {icon}
