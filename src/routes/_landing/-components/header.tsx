@@ -1,31 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Link, linkOptions } from '@tanstack/react-router'
-import { MdOutlineSpaceDashboard } from 'react-icons/md'
-import { PiPaintBrushDuotone } from 'react-icons/pi'
+import { Link } from '@tanstack/react-router'
 import { IconContext } from 'react-icons'
-
-const links = linkOptions([
-  {
-    to: '/dashboard',
-    from: '/',
-    label: (
-      <>
-        <MdOutlineSpaceDashboard />
-        Dashboard
-      </>
-    ),
-  },
-  {
-    to: '/design-system',
-    from: '/',
-    label: (
-      <>
-        <PiPaintBrushDuotone />
-        Design
-      </>
-    ),
-  },
-])
+import { internalLinks } from '../-shared.data'
 
 export const Header = () => {
   const [scrollY, setScrollY] = useState(0)
@@ -44,7 +20,7 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrolled = scrollY > 300
+  const scrolled = scrollY > 300 && progress < 100
 
   return (
     <header
@@ -67,7 +43,7 @@ export const Header = () => {
             },
           }}
         >
-          {links.map((link) => (
+          {internalLinks.map((link) => (
             <Link
               {...link}
               key={link.to}

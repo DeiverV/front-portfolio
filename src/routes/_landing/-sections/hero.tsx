@@ -26,7 +26,7 @@ export const Hero = () => {
       ref={heroRef}
       className="h-screen grid place-items-center overflow-hidden bg-primary"
     >
-      <section className="animate-[fadeIn_4s_ease-in] z-10 grid px-8 place-items-center">
+      <section className="animate-[fadeIn_2.5s_ease-in] z-10 grid px-8 place-items-center">
         <h1 className="text-secondary font-semibold text-6xl sm:text-9xl text-center font-styled">
           Deiber Verano
         </h1>

@@ -86,7 +86,7 @@
 html,
 body {
   scroll-behavior: smooth;
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
 }
 
 @layer utilities {

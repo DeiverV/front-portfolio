@@ -1,4 +1,8 @@
-import { Outlet, createRootRouteWithContext } from '@tanstack/react-router'
+import {
+  Navigate,
+  Outlet,
+  createRootRouteWithContext,
+} from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 
@@ -28,6 +32,6 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       />
     </>
   ),
-  notFoundComponent: () => <div>404 Not Found</div>,
-  onError: () => <div>404 Not Found</div>,
+  notFoundComponent: () => <Navigate to="/" />,
+  onError: () => <Navigate to="/" />,
 })

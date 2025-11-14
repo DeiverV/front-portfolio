@@ -1,58 +1,9 @@
-export const About = () => {
-  const items = [
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
-      label: 'TypeScript',
-    },
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
-      label: 'JavaScript',
-    },
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg',
-      label: 'Astro',
-    },
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
-      label: 'React',
-    },
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
-      label: 'Tailwind',
-    },
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zustand/zustand-original.svg',
-      label: 'Zustand',
-    },
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg',
-      label: 'Vite',
-    },
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg',
-      label: 'Express',
-    },
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg',
-      label: 'NestJS',
-    },
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg',
-      label: 'Jest',
-    },
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg',
-      label: 'Postman',
-    },
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg',
-      label: 'Figma',
-    },
-  ]
+import { technologies } from '../-shared.data'
 
+export const About = () => {
   return (
     <article
-      className="bg-secondary min-h-screen flex flex-col justify-around gap-12 px-8 sm:px-[100px] lg:px-[250px] xl:px-[400px] pt-20 pb-12"
+      className="bg-secondary min-h-screen flex flex-col justify-around gap-12 pt-20 pb-12"
       aria-label="Tech Stack"
     >
       <section className="flex flex-col gap-2 p-8 border-primary border-b-3 border-dashed pl-4">
@@ -74,7 +25,7 @@ export const About = () => {
           Tools
         </h4>
         <div className="flex justify-center h-full w-full flex-wrap py-8 rounded-2xl">
-          {items.map((item, index) => (
+          {technologies.map((item, index) => (
             <figure
               key={index}
               className={`flex flex-col items-center justify-center w-[45%] sm:w-[25%] text-white py-4`}
