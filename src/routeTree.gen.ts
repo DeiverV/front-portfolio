@@ -11,7 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as DesignSystemRouteRouteImport } from './routes/design-system/route'
 import { Route as DashboardRouteRouteImport } from './routes/dashboard/route'
-import { Route as LandingIndexRouteImport } from './routes/_landing/index'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
+import { Route as DashboardLinkedinRouteImport } from './routes/dashboard/linkedin'
+import { Route as DashboardGithubRouteImport } from './routes/dashboard/github'
+import { Route as DashboardExchangesRouteImport } from './routes/dashboard/exchanges'
+import { Route as DashboardCatsRouteImport } from './routes/dashboard/cats'
 
 const DesignSystemRouteRoute = DesignSystemRouteRouteImport.update({
   id: '/design-system',
@@ -23,40 +28,103 @@ const DashboardRouteRoute = DashboardRouteRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LandingIndexRoute = LandingIndexRouteImport.update({
-  id: '/_landing/',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DashboardIndexRoute = DashboardIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DashboardRouteRoute,
+} as any)
+const DashboardLinkedinRoute = DashboardLinkedinRouteImport.update({
+  id: '/linkedin',
+  path: '/linkedin',
+  getParentRoute: () => DashboardRouteRoute,
+} as any)
+const DashboardGithubRoute = DashboardGithubRouteImport.update({
+  id: '/github',
+  path: '/github',
+  getParentRoute: () => DashboardRouteRoute,
+} as any)
+const DashboardExchangesRoute = DashboardExchangesRouteImport.update({
+  id: '/exchanges',
+  path: '/exchanges',
+  getParentRoute: () => DashboardRouteRoute,
+} as any)
+const DashboardCatsRoute = DashboardCatsRouteImport.update({
+  id: '/cats',
+  path: '/cats',
+  getParentRoute: () => DashboardRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
-  '/dashboard': typeof DashboardRouteRoute
+  '/': typeof IndexRoute
+  '/dashboard': typeof DashboardRouteRouteWithChildren
   '/design-system': typeof DesignSystemRouteRoute
-  '/': typeof LandingIndexRoute
+  '/dashboard/cats': typeof DashboardCatsRoute
+  '/dashboard/exchanges': typeof DashboardExchangesRoute
+  '/dashboard/github': typeof DashboardGithubRoute
+  '/dashboard/linkedin': typeof DashboardLinkedinRoute
+  '/dashboard/': typeof DashboardIndexRoute
 }
 export interface FileRoutesByTo {
-  '/dashboard': typeof DashboardRouteRoute
+  '/': typeof IndexRoute
   '/design-system': typeof DesignSystemRouteRoute
-  '/': typeof LandingIndexRoute
+  '/dashboard/cats': typeof DashboardCatsRoute
+  '/dashboard/exchanges': typeof DashboardExchangesRoute
+  '/dashboard/github': typeof DashboardGithubRoute
+  '/dashboard/linkedin': typeof DashboardLinkedinRoute
+  '/dashboard': typeof DashboardIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/dashboard': typeof DashboardRouteRoute
+  '/': typeof IndexRoute
+  '/dashboard': typeof DashboardRouteRouteWithChildren
   '/design-system': typeof DesignSystemRouteRoute
-  '/_landing/': typeof LandingIndexRoute
+  '/dashboard/cats': typeof DashboardCatsRoute
+  '/dashboard/exchanges': typeof DashboardExchangesRoute
+  '/dashboard/github': typeof DashboardGithubRoute
+  '/dashboard/linkedin': typeof DashboardLinkedinRoute
+  '/dashboard/': typeof DashboardIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/dashboard' | '/design-system' | '/'
+  fullPaths:
+    | '/'
+    | '/dashboard'
+    | '/design-system'
+    | '/dashboard/cats'
+    | '/dashboard/exchanges'
+    | '/dashboard/github'
+    | '/dashboard/linkedin'
+    | '/dashboard/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/dashboard' | '/design-system' | '/'
-  id: '__root__' | '/dashboard' | '/design-system' | '/_landing/'
+  to:
+    | '/'
+    | '/design-system'
+    | '/dashboard/cats'
+    | '/dashboard/exchanges'
+    | '/dashboard/github'
+    | '/dashboard/linkedin'
+    | '/dashboard'
+  id:
+    | '__root__'
+    | '/'
+    | '/dashboard'
+    | '/design-system'
+    | '/dashboard/cats'
+    | '/dashboard/exchanges'
+    | '/dashboard/github'
+    | '/dashboard/linkedin'
+    | '/dashboard/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  DashboardRouteRoute: typeof DashboardRouteRoute
+  IndexRoute: typeof IndexRoute
+  DashboardRouteRoute: typeof DashboardRouteRouteWithChildren
   DesignSystemRouteRoute: typeof DesignSystemRouteRoute
-  LandingIndexRoute: typeof LandingIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -75,20 +143,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/_landing/': {
-      id: '/_landing/'
+    '/': {
+      id: '/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof LandingIndexRouteImport
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/': {
+      id: '/dashboard/'
+      path: '/'
+      fullPath: '/dashboard/'
+      preLoaderRoute: typeof DashboardIndexRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
+    '/dashboard/linkedin': {
+      id: '/dashboard/linkedin'
+      path: '/linkedin'
+      fullPath: '/dashboard/linkedin'
+      preLoaderRoute: typeof DashboardLinkedinRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
+    '/dashboard/github': {
+      id: '/dashboard/github'
+      path: '/github'
+      fullPath: '/dashboard/github'
+      preLoaderRoute: typeof DashboardGithubRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
+    '/dashboard/exchanges': {
+      id: '/dashboard/exchanges'
+      path: '/exchanges'
+      fullPath: '/dashboard/exchanges'
+      preLoaderRoute: typeof DashboardExchangesRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
+    '/dashboard/cats': {
+      id: '/dashboard/cats'
+      path: '/cats'
+      fullPath: '/dashboard/cats'
+      preLoaderRoute: typeof DashboardCatsRouteImport
+      parentRoute: typeof DashboardRouteRoute
     }
   }
 }
 
+interface DashboardRouteRouteChildren {
+  DashboardCatsRoute: typeof DashboardCatsRoute
+  DashboardExchangesRoute: typeof DashboardExchangesRoute
+  DashboardGithubRoute: typeof DashboardGithubRoute
+  DashboardLinkedinRoute: typeof DashboardLinkedinRoute
+  DashboardIndexRoute: typeof DashboardIndexRoute
+}
+
+const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
+  DashboardCatsRoute: DashboardCatsRoute,
+  DashboardExchangesRoute: DashboardExchangesRoute,
+  DashboardGithubRoute: DashboardGithubRoute,
+  DashboardLinkedinRoute: DashboardLinkedinRoute,
+  DashboardIndexRoute: DashboardIndexRoute,
+}
+
+const DashboardRouteRouteWithChildren = DashboardRouteRoute._addFileChildren(
+  DashboardRouteRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
-  DashboardRouteRoute: DashboardRouteRoute,
+  IndexRoute: IndexRoute,
+  DashboardRouteRoute: DashboardRouteRouteWithChildren,
   DesignSystemRouteRoute: DesignSystemRouteRoute,
-  LandingIndexRoute: LandingIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

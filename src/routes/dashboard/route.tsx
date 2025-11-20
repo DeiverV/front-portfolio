@@ -1,25 +1,31 @@
-import { Link, createFileRoute } from '@tanstack/react-router'
-import { useTranslation } from 'react-i18next'
+import { Outlet, createFileRoute } from '@tanstack/react-router'
+import { Navbar } from '@/features/dashboard/common/components/navbar/navbar'
+import { Sidebar } from '@/features/dashboard/common/components/sidebar/sidebar'
 
 export const Route = createFileRoute('/dashboard')({
   component: RouteComponent,
 })
 
 function RouteComponent() {
-  const { t } = useTranslation('common')
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-neutral px-8">
-      <p className="text-text text-6xl sm:text-9xl">😴</p>
-      <h1 className="text-text text-2xl sm:text-4xl text-center">
-        {t('workingOnThis')}
-      </h1>
-      <Link
-        to="/"
-        viewTransition
-        className="rounded-default bg-text text-neutral px-8 py-2 mt-4"
+    <section
+      className="flex dark:bg-gray-500 bg-black"
+      aria-description="dashboard layout"
+    >
+      <Sidebar />
+
+      <section className="flex-col gap-2 grow">
+        <Navbar />
+        <main className="min-h-[99vh] bg-neutral/95 px-4 sm:px-16 md:px-[120px] py-6">
+          <Outlet />
+        </main>
+      </section>
+      <figure
+        aria-hidden={true}
+        className="text-[300px] font-bold text-primary/10 fixed -bottom-20 right-5"
       >
-        {t('back')}
-      </Link>
-    </div>
+        .d
+      </figure>
+    </section>
   )
 }
