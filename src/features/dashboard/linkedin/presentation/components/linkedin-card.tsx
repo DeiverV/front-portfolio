@@ -28,7 +28,7 @@ export const LinkedInCard = ({ author, dateAndRelationship, text }: Props) => {
             </a>
           </div>
           <p className="text-xs">{author.position}</p>
-          <p className="text-text/70 text-xs font-bold">
+          <p className="text-text/70 text-xs">
             {dateAndRelationship}
           </p>
         </div>

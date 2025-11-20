@@ -1,4 +1,4 @@
-import { Scripts, createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 
 import { Seo } from '@/features/landing/components/seo'
 import { LandingPage } from '@/features/landing/landing.page'
@@ -9,7 +9,6 @@ export const Route = createFileRoute('/')({
     <>
       <Seo />
       <LandingPage />
-      <Scripts />
       <div className="fixed bottom-4 right-4 md:bottom-12 md:right-12 z-50">
         <CustomizeStylesMenu />
       </div>

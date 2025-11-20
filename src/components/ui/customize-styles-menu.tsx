@@ -93,13 +93,13 @@ export const CustomizeStylesMenu = ({ alignment = 'top' }: Props) => {
           <p className="font-bold mt-2">{t('language')}</p>
           <div className="flex gap-2">
             <button
-              className="h-8 w-8 rounded-full border font-bold"
+              className="h-8 w-8 rounded-default border font-bold"
               onClick={() => i18nSetLang('en')}
             >
               En
             </button>
             <button
-              className="h-8 w-8 rounded-full border font-bold"
+              className="h-8 w-8 rounded-default border font-bold"
               onClick={() => i18nSetLang('es')}
             >
               Es
@@ -111,7 +111,7 @@ export const CustomizeStylesMenu = ({ alignment = 'top' }: Props) => {
             {color.map((item) => (
               <button
                 key={item}
-                className="h-8 w-8 rounded-full"
+                className="h-8 w-8 rounded-default"
                 style={{ backgroundColor: item }}
                 onClick={() => setPrimary(item)}
               />
