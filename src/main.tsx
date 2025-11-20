@@ -6,8 +6,8 @@ import * as TanStackQueryProvider from './integrations/tanstack-query/root-provi
 
 import { routeTree } from './routeTree.gen'
 import './i18n/i18n'
-import './styles.css'
-import './animations.css'
+import './css/styles.css'
+import './css/animations.css'
 
 const TanStackQueryProviderContext = TanStackQueryProvider.getContext()
 

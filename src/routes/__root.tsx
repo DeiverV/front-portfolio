@@ -3,6 +3,9 @@ import {
   Outlet,
   createRootRouteWithContext,
 } from '@tanstack/react-router'
+import { TanStackDevtools } from '@tanstack/react-devtools'
+import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
+import TanStackQueryDevtools from '../integrations/tanstack-query/devtools'
 
 import type { QueryClient } from '@tanstack/react-query'
 import { CustomizeStylesMenu } from '@/components/customize-styles-menu'
@@ -15,7 +18,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
   component: () => (
     <>
       <Outlet />
-      {/* <TanStackDevtools
+      <TanStackDevtools
         config={{
           position: 'bottom-right',
         }}
@@ -26,7 +29,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
           },
           TanStackQueryDevtools,
         ]}
-      /> */}
+      />
       <CustomizeStylesMenu />
     </>
   ),
