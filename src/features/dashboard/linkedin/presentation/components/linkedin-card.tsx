@@ -12,7 +12,7 @@ export const LinkedInCard = ({ author, dateAndRelationship, text }: Props) => {
         <img
           src={author.image}
           alt={author.name}
-          className="w-[45px] h-[45px] rounded-full object-cover bg-primary"
+          className="w-[52px] h-[52px] rounded-full object-cover bg-primary border"
         />
         <div>
           <div className="flex items-center gap-1">

@@ -1,9 +1,19 @@
 [
   {
     "author": {
+      "name": "Angel Lindarte",
+      "image": "/linkedin/linkedinAl.webp",
+      "link": "https://www.linkedin.com/in/angel-lindarte-software-developer/",
+      "position": "Senior Software Engineer at @MercadoLibre | Golang | Python | Typescript | Aws | AI"
+    },
+    "dateAndRelationship": "18 de marzo de 2022, Angel trabajaba con Deiber en el mismo equipo",
+    "text": "Working with Deiber was a great experience, he is studying and working every time so he was able to work in better things every day, is a exceptional developer, a person who I'd like to work again some day."
+  },
+  {
+    "author": {
       "name": "Jorge Andrés Vargas Cordoba",
-      "image": "https://media.licdn.com/dms/image/v2/D4E03AQG7TBr-Q-xrgQ/profile-displayphoto-shrink_100_100/B4EZXS.J5NHUAY-/0/1743001264704?e=1765411200&v=beta&t=bgOtk5a-jjeTcyLX-7CQlmOJiFx9ew3ip0IU1GRcMwk",
-      "link": "",
+      "image": "/linkedin/linkedinJv.webp",
+      "link": "https://www.linkedin.com/in/jorgeavargasc/",
       "position": "Senior Frontend Developer | React | Nest | Node | Electronic and Telecommunications Engineer"
     },
     "dateAndRelationship": "15 de noviembre de 2024, Jorge Andrés trabajaba con Deiber en el mismo equipo",
@@ -12,8 +22,8 @@
   {
     "author": {
       "name": "Daniel Gómez Méndez",
-      "image": "https://media.licdn.com/dms/image/v2/D4E03AQGsvAyubv1txw/profile-displayphoto-shrink_100_100/B4EZPXq9tBHEAU-/0/1734490185780?e=1765411200&v=beta&t=mQvt7yNNhXI1-wMYuukbR6YQpMy7_KAXKnAnN7j6ogg",
-      "link": "",
+      "image": "/linkedin/linkedinDg.webp",
+      "link": "https://www.linkedin.com/in/dgomez216/",
       "position": "IT Project Manager | Product Owner | Scrum Master | Digital Solutions & AI Strategist"
     },
     "dateAndRelationship": "15 de noviembre de 2024, Daniel supervisaba directamente a Deiber",
@@ -22,8 +32,8 @@
   {
     "author": {
       "name": "Omar Esteban Contreras Leal",
-      "image": "https://media.licdn.com/dms/image/v2/D4E03AQHkDOy8nfCDjw/profile-displayphoto-scale_100_100/B4EZkpwYXhKoAc-/0/1757342174156?e=1765411200&v=beta&t=mvjRbob_szRBkZlNUjDK5U3xBELRt2sxllQ5ou6lWK0",
-      "link": "",
+      "image": "/linkedin/linkedinOc.webp",
+      "link": "https://www.linkedin.com/in/omarcontreras-frontend-qa/",
       "position": "Test Automation Engineer, SSr at @CI&T | Software engineer"
     },
     "dateAndRelationship": "1 de abril de 2022, Omar Esteban trabajaba con Deiber en el mismo equipo",
@@ -31,12 +41,12 @@
   },
   {
     "author": {
-      "name": "Angel Lindarte",
-      "image": "https://media.licdn.com/dms/image/v2/D4E03AQErRtlssFPfDA/profile-displayphoto-scale_100_100/B4EZpvwjmrHgAc-/0/1762811594384?e=1765411200&v=beta&t=_ziQ2my1xXaM4hNd6faAuy9GsdduLrySGateenBMTHE",
-      "link": "",
-      "position": "Senior Software Engineer at @MercadoLibre | Golang | Python | Typescript | Aws | AI"
+      "name": "Camilo Alejandro Contreras Leal",
+      "image": "/linkedin/linkedinCc.webp",
+      "link": "https://www.linkedin.com/in/alejandroco25/",
+      "position": "QA Automation Engineer || Automatizador de Pruebas de Software || QA Engineer"
     },
-    "dateAndRelationship": "18 de marzo de 2022, Angel trabajaba con Deiber en el mismo equipo",
-    "text": "Working with Deiber was a great experience, he is studying and working every time so he was able to work in better things every day, is a exceptional developer, a person who I'd like to work again some day."
+    "dateAndRelationship": "27 de julio de 2023, Camilo y Deiber estudiaron juntos",
+    "text": "Deiber es un profesional altamente dedicado y comprometido con su trabajo. Siempre se muestra dispuesto a asumir nuevos desafíos y demuestra una capacidad innata para enfrentar situaciones complejas con una actitud positiva y resolutiva. Su habilidad para mantener la calma bajo presión y su enfoque meticuloso en la resolución de problemas han sido fundamentales para el éxito de varios proyectos en los que hemos trabajado juntos.\n\nAdemás de sus habilidades técnicas impresionantes, Deiber es un colaborador excepcional. Siempre está dispuesto a compartir sus conocimientos y experiencias con otros miembros del equipo, lo que lo convierte en un excelente mentor para aquellos que buscan aprender y crecer profesionalmente. Su capacidad para comunicar ideas de manera clara y concisa es una de sus mayores fortalezas, lo que facilita la colaboración y el trabajo en equipo.\n\nA lo largo del tiempo que he trabajado con Deiber, he sido testigo de su capacidad para innovar y encontrar soluciones creativas para los desafíos que enfrentamos. Su enfoque analítico y su habilidad para pensar \"fuera de la caja\" han resultado en mejoras significativas en nuestros procesos y resultados.\n\nEn resumen, recomendaría a Deiber sin ninguna duda para cualquier rol en el que su experiencia y habilidades técnicas sean relevantes. Su ética laboral, su pasión por el aprendizaje constante y su actitud positiva lo convierten en un compañero excepcional y un activo invaluable para cualquier organización."
   }
 ]

@@ -5,6 +5,8 @@ import {
   PiGithubLogo,
   PiLinkedinLogo,
 } from 'react-icons/pi'
+import { TbX } from 'react-icons/tb'
+import { useShallow } from 'zustand/react/shallow'
 
 import { useSidebarStore } from '../../store/sidebar-store'
 
@@ -32,15 +34,15 @@ const moduleLinks = linkOptions([
 ])
 
 export const Sidebar = () => {
-  const isOpen = useSidebarStore((state) => state.isOpen)
+  const { toggle, isOpen } = useSidebarStore(useShallow((state) => state))
 
   return (
     <aside
-      className="h-screen sticky top-0 left-0 bg-neutral border-r border-text z-50 duration-200"
+      className={`h-screen top-0 left-0 bg-neutral border-r border-text z-100 duration-200  ${isOpen ? 'fixed block w-full sm:w-[200px] sm:sticky' : 'hidden sm:block sm:sticky'} `}
       aria-expanded={isOpen}
     >
       <nav
-        className={`flex flex-col items-center gap-2 duration-300 ${isOpen ? 'w-[200px] pr-2' : 'w-[65px]'}`}
+        className={`relative flex flex-col items-center gap-2 duration-300 ${isOpen ? 'w-full sm:w-[200px] pr-2' : 'w-[65px]'}`}
       >
         <Link
           to="/"
@@ -49,6 +51,13 @@ export const Sidebar = () => {
         >
           .d
         </Link>
+        <button
+          onClick={toggle}
+          aria-label="Close Sidebar"
+          className="sm:hidden"
+        >
+          <TbX size={24} className="absolute right-5 top-4" />
+        </button>
         {moduleLinks.map((link) => (
           <Link
             {...link}
