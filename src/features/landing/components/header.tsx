@@ -45,6 +45,7 @@ export const Header = () => {
             <Link
               {...link}
               key={link.to}
+              from="/"
               viewTransition
               className="flex gap-1 items-center font-bold text-shadow-2xs transition-colors duration-300 text-lg text-white text-shadow-black/20"
             >
