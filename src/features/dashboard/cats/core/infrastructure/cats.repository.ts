@@ -2,10 +2,8 @@ import type { RepositoryFactory } from '@/types/repository-factory.type'
 import type { ICatsRepository } from '../domain/cats.repository'
 
 export const catsRepo: RepositoryFactory<ICatsRepository> = (api) => ({
-  async getCatImage(id) {
-    const { data } = await api.get(`/cat/${id}`, {
-      responseType: 'blob',
-    })
+  async getCatDetails(id) {
+    const { data } = await api.get(`/cat/${id}`)
 
     return data
   },
