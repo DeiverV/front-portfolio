@@ -18,3 +18,14 @@ export interface ICatDetails {
   created_at: string
   url: string
 }
+
+export interface ICreateCatPayload {
+  text?: string
+  fontSize?: number
+  fontColor?: string
+  filter: '' | 'mono' | 'negate' | 'custom'
+  brightness?: number
+  lightness?: number
+  saturation?: number
+  tags?: Array<string>
+}

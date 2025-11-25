@@ -1,12 +1,31 @@
 import { Cat } from './components/cat'
+import { CreateCat } from './components/create-cat/create-cat'
 import { useCatsPage } from './hooks/use-cats-page'
+
+import { Modal } from '@/components/ui/modal/modal'
+import { useModal } from '@/components/ui/modal/hook/use-modal'
 
 export const CatsPage = () => {
   const { allRows, parentRef, rowVirtualizer } = useCatsPage()
 
+  const { closeModal, open, openModal } = useModal()
+
   return (
-    <section className="m-auto flex flex-col gap-4 w-[600px] p-4 rounded-default">
-      <h1 className="font-bold text-2xl">Cats!</h1>
+    <section className="m-auto flex flex-col gap-4 w-[350px] md:w-[550px] lg:w-[600px] p-4 rounded-default">
+      <div className="flex items-center justify-between">
+        <h1 className="font-bold text-2xl">Cats!</h1>
+
+        <button
+          onClick={openModal}
+          className="px-4 py-2 bg-primary text-white rounded-default hover:bg-primary/80 transition"
+        >
+          Create Cat
+        </button>
+      </div>
+
+      <Modal open={open} onClose={closeModal}>
+        <CreateCat />
+      </Modal>
 
       <section ref={parentRef} className="overflow-auto h-[80vh] w-full px-4">
         <div

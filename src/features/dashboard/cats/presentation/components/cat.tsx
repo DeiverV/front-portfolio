@@ -11,14 +11,12 @@ export const Cat = ({ cat }: { cat: IGetCatsResponse[number] }) => {
 
   return (
     <article className="p-6 rounded-default overflow-hidden w-full bg-neutral shadow-text/20 shadow-lg grid gap-4 place-items-center max-h-[550px]">
-      <figure className="w-full bg-primary/10 flex justify-center py-6 rounded-default">
-        <img
-          src={catImageQuery.data.url}
-          alt={cat.id}
-          loading="eager"
-          className="h-[350px] max-w-[450px] object-cover rounded-default"
-        />
-      </figure>
+      <img
+        src={catImageQuery.data.url}
+        alt={cat.id}
+        loading="eager"
+        className="h-[350px] max-w-60 md:max-w-[400px] lg:max-w-[450px] object-cover rounded-default"
+      />
 
       <p className="text-lg font-bold">Tags:</p>
       <div className="flex gap-2">
