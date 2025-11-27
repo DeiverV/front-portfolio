@@ -12,7 +12,7 @@ export const useCatsPage = () => {
   const rowVirtualizer = useVirtualizer({
     count: hasNextPage ? allRows.length + 5 : allRows.length,
     getScrollElement: () => parentRef.current,
-    estimateSize: () => 430,
+    estimateSize: () => 450,
     overscan: 5,
   })
 

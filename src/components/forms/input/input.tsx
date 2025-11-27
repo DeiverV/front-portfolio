@@ -21,7 +21,7 @@ export const FieldInput = ({ label, id, name, ...rest }: IFieldInput) => {
         name={name}
         type="text"
         {...rest}
-        className="px-3 py-2 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary"
+        className="px-3 py-2 rounded-default border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary"
       />
     </div>
   )
