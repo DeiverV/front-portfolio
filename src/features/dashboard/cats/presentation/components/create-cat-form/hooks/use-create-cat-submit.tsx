@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import { useCreateCat } from '../../../hooks/use-create-cat'
 import type { ICreateCatPayload } from '@/features/dashboard/cats/core/domain/cats.types'
+import type { AxiosError } from 'axios'
 
 const FORM_KEYS: Array<keyof ICreateCatPayload> = [
   'text',
@@ -20,10 +20,11 @@ const NUMBER_FIELDS: Array<keyof ICreateCatPayload> = [
   'saturation',
 ]
 
-export const useCreateCatForm = () => {
-  const [filter, setFilter] = useState<ICreateCatPayload['filter']>('')
-  const [text, setText] = useState('')
-
+export const useCreateCatSubmit = ({
+  resetForm,
+}: {
+  resetForm: VoidFunction
+}) => {
   const createCatMutation = useCreateCat()
 
   const parseFormValue = (
@@ -42,9 +43,7 @@ export const useCreateCatForm = () => {
   }
 
   const buildPayload = (formData: FormData): ICreateCatPayload => {
-    const payload: Partial<ICreateCatPayload> = {
-      filter: filter,
-    }
+    const payload: Partial<ICreateCatPayload> = {}
 
     for (const key of FORM_KEYS) {
       const rawValue = key === 'tags' ? formData.getAll(key) : formData.get(key)
@@ -57,17 +56,15 @@ export const useCreateCatForm = () => {
   const onSubmit = async (formData: FormData) => {
     const payload = buildPayload(formData)
 
-    setText('')
-    setFilter('')
-
-    await createCatMutation.mutateAsync(payload)
+    try {
+      await createCatMutation.mutateAsync(payload)
+      resetForm()
+    } catch (error) {}
   }
 
   return {
-    filter,
-    setFilter,
-    text,
-    setText,
     onSubmit,
+    error: createCatMutation.error as AxiosError<string> | undefined,
+    isLoading: createCatMutation.isPending,
   }
 }

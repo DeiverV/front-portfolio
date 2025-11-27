@@ -1,5 +1,5 @@
 import { Cat } from './components/cat'
-import { CreateCat } from './components/create-cat/create-cat'
+import { CreateCatForm } from './components/create-cat-form/create-cat-form'
 import { useCatsPage } from './hooks/use-cats-page'
 
 import { Modal } from '@/components/ui/modal/modal'
@@ -24,7 +24,7 @@ export const CatsPage = () => {
       </div>
 
       <Modal open={open} onClose={closeModal}>
-        <CreateCat />
+        <CreateCatForm />
       </Modal>
 
       <section ref={parentRef} className="overflow-auto h-[80vh] w-full px-4">
