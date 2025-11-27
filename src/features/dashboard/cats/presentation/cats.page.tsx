@@ -27,7 +27,7 @@ export const CatsPage = () => {
         <CreateCatForm />
       </Modal>
 
-      <section ref={parentRef} className="overflow-auto h-[80vh] w-full sm:px-4">
+      <section ref={parentRef} className="overflow-auto h-[75vh] sm:h-[80vh] w-full sm:px-4">
         <div
           className="relative w-full grid gap-4"
           style={{

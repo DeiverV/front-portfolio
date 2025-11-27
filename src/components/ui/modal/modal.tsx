@@ -24,7 +24,7 @@ export const Modal = ({ open, onClose, children }: ModalProps) => {
 
         <div
           className={`
-            absolute bg-neutral rounded-default bottom-0 rounded-b-none sm:rounded-b-default sm:bottom-auto p-4 shadow-2xl h-screen sm:max-h-[70vh] overflow-x-auto sm:max-w-lg w-full
+            absolute bg-neutral rounded-default flex items-center bottom-0 rounded-b-none sm:rounded-b-default sm:bottom-auto p-4 shadow-2xl h-screen sm:max-h-[70vh] overflow-x-auto sm:max-w-lg w-full
             transform transition-all duration-300
             ${open ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}
           `}

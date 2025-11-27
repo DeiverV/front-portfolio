@@ -22,7 +22,7 @@ export const CreateCatForm = () => {
   })
 
   return (
-    <div className="max-w-md mx-auto p-6 rounded-xl">
+    <div className="w-full mx-auto p-6 rounded-xl">
       <h3 className="text-xl font-semibold mb-4 text-center">Create a Cat!</h3>
 
       <form

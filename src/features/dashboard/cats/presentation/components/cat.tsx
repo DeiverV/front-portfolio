@@ -20,8 +20,8 @@ export const Cat = ({ cat }: { cat: IGetCatsResponse[number] }) => {
 
       <div className="flex gap-2 items-center justify-between w-full mt-2">
         <p className="text-lg font-bold">Tags:</p>
-        <div className="flex gap-2">
-          {cat.tags.map((tag) => (
+        <div className="flex gap-2 items-center flex-wrap">
+          {cat.tags.slice(0, 2).map((tag) => (
             <span
               key={tag}
               className="px-2 py-1 bg-primary text-white rounded-default text-sm"
@@ -29,6 +29,9 @@ export const Cat = ({ cat }: { cat: IGetCatsResponse[number] }) => {
               {tag}
             </span>
           ))}
+          {cat.tags.length > 2 && (
+            <span className="px-2 py-1 bg-primary text-white rounded-default text-sm">+{cat.tags.length - 2}</span>
+          )}
         </div>
 
         {cat.tags.length === 0 && (
