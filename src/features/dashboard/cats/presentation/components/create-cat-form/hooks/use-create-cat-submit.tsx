@@ -55,11 +55,14 @@ export const useCreateCatSubmit = ({
 
   const onSubmit = async (formData: FormData) => {
     const payload = buildPayload(formData)
-
+    const newTab = window.open('', '_blank')
     try {
-      await createCatMutation.mutateAsync(payload)
+      const res = await createCatMutation.mutateAsync(payload)
       resetForm()
-    } catch (error) {}
+      if (newTab) newTab.location.href = res.url
+    } catch (error) {
+      if (newTab) newTab.close()
+    }
   }
 
   return {

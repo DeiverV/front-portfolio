@@ -1,3 +1,4 @@
+import { Activity } from 'react'
 import {
   useCreateCatFields,
   useCreateCatForm,
@@ -52,7 +53,7 @@ export const CreateCatForm = () => {
             }
           />
 
-          {text.length > 0 && (
+          <Activity mode={text.length > 0 ? 'visible' : 'hidden'}>
             <fieldset className="border border-neutral-300 dark:border-neutral-700 rounded-lg p-4">
               <legend className="px-1 text-sm font-semibold">
                 Font Options
@@ -60,9 +61,9 @@ export const CreateCatForm = () => {
               <FieldInput {...fields.fontSize} />
               <FieldInput {...fields.fontColor} />
             </fieldset>
-          )}
+          </Activity>
 
-          {filter === 'custom' && (
+          <Activity mode={filter === 'custom' ? 'visible' : 'hidden'}>
             <fieldset className="border border-neutral-300 dark:border-neutral-700 rounded-lg p-4">
               <legend className="px-1 text-sm font-semibold">
                 Custom Filter Settings
@@ -72,7 +73,7 @@ export const CreateCatForm = () => {
               <FieldInput {...fields.lightness} />
               <FieldInput {...fields.saturation} />
             </fieldset>
-          )}
+          </Activity>
         </div>
 
         {error?.name && (
