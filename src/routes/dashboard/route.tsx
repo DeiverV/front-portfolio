@@ -16,7 +16,7 @@ function RouteComponent() {
 
       <section className="flex-col gap-2 grow">
         <Navbar />
-        <main className="min-h-[calc(100vh-50px)] duration-200 bg-neutral/95 px-4 sm:px-16 md:px-[120px] py-6">
+        <main className="min-h-[calc(100vh-50px)] duration-200 bg-neutral/95 px-2 sm:px-16 md:px-[120px] py-6">
           <Outlet />
         </main>
       </section>

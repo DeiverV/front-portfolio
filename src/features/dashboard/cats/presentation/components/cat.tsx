@@ -10,24 +10,26 @@ export const Cat = ({ cat }: { cat: IGetCatsResponse[number] }) => {
     )
 
   return (
-    <article className="p-6 rounded-default overflow-hidden w-full bg-neutral shadow-text/20 shadow-lg grid gap-4 place-items-center max-h-[550px]">
+    <article className="px-2 py-2 sm:p-4 rounded-default overflow-hidden w-full bg-neutral shadow-text/20 shadow-md grid gap-2 place-items-center max-h-[550px]">
       <img
         src={catImageQuery.data.url}
         alt={cat.id}
         loading="eager"
-        className="h-[350px] max-w-60 md:max-w-[400px] lg:max-w-[450px] object-cover rounded-default"
+        className="h-[350px] w-full md:max-w-[400px] lg:max-w-[450px] object-cover rounded-default"
       />
 
-      <p className="text-lg font-bold">Tags:</p>
-      <div className="flex gap-2">
-        {cat.tags.map((tag) => (
-          <span
-            key={tag}
-            className="px-4 py-2 bg-primary text-white rounded-default"
-          >
-            {tag}
-          </span>
-        ))}
+      <div className="flex gap-2 items-center justify-between w-full mt-2">
+        <p className="text-lg font-bold">Tags:</p>
+        <div className="flex gap-2">
+          {cat.tags.map((tag) => (
+            <span
+              key={tag}
+              className="px-2 py-1 bg-primary text-white rounded-default text-sm"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
 
         {cat.tags.length === 0 && (
           <span className="italic text-gray-500">No tags</span>

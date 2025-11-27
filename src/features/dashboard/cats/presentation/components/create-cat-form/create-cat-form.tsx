@@ -37,7 +37,7 @@ export const CreateCatForm = () => {
           Fill out the form below to generate a customized cat image.
         </p>
 
-        <div className="h-[400px] max-h-[400px] pl-2 pr-4 overflow-y-auto space-y-5">
+        <div className="h-[350px] max-h-[350px] pl-2 pr-4 overflow-y-auto space-y-5">
           <FieldInput
             {...fields.text}
             value={text}

@@ -34,7 +34,9 @@ const moduleLinks = linkOptions([
 ])
 
 export const Sidebar = () => {
-  const { toggle, isOpen } = useSidebarStore(useShallow((state) => state))
+  const { toggle, isOpen, close } = useSidebarStore(
+    useShallow((state) => state),
+  )
 
   return (
     <aside
@@ -63,6 +65,7 @@ export const Sidebar = () => {
             {...link}
             key={link.to}
             viewTransition
+            onClick={close}
             className={`flex gap-1 items-center font-bold duration-300 text-sm ${isOpen ? 'w-[180px] px-4 ml-2' : 'w-[50px] ml-1 justify-center '} hover:bg-text/10 py-2 rounded-default`}
             aria-label={link.label}
             activeProps={{

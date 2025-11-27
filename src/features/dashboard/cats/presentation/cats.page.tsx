@@ -11,7 +11,7 @@ export const CatsPage = () => {
   const { closeModal, open, openModal } = useModal()
 
   return (
-    <section className="m-auto flex flex-col gap-4 w-[350px] md:w-[550px] lg:w-[600px] p-4 rounded-default">
+    <section className="m-auto flex flex-col gap-4 w-[350px] md:w-[550px] lg:w-[600px] p-4 rounded-default z-10 relative">
       <div className="flex items-center justify-between">
         <h1 className="font-bold text-2xl">Cats!</h1>
 
@@ -27,7 +27,7 @@ export const CatsPage = () => {
         <CreateCatForm />
       </Modal>
 
-      <section ref={parentRef} className="overflow-auto h-[80vh] w-full px-4">
+      <section ref={parentRef} className="overflow-auto h-[80vh] w-full sm:px-4">
         <div
           className="relative w-full grid gap-4"
           style={{
