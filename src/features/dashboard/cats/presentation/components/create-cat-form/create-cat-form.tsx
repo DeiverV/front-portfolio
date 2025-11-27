@@ -9,6 +9,7 @@ import type { ICreateCatPayload } from '../../../core/domain/cats.types'
 import { FieldInput } from '@/components/forms/input/input'
 import { FieldSelect } from '@/components/forms/select/select'
 import { AlertError } from '@/components/ui/alert/error'
+import { useTranslation } from 'react-i18next'
 
 export const CreateCatForm = () => {
   const fields = useCreateCatFields()
@@ -21,9 +22,11 @@ export const CreateCatForm = () => {
     },
   })
 
+  const { t } = useTranslation('dashboard')
+
   return (
     <div className="w-full mx-auto p-6 rounded-xl">
-      <h3 className="text-xl font-semibold mb-4 text-center">Create a Cat!</h3>
+      <h3 className="text-xl font-semibold mb-4 text-center">{t('cats.createTitle')}</h3>
 
       <form
         action={onSubmit}
@@ -34,7 +37,7 @@ export const CreateCatForm = () => {
           id="create-cat-description"
           className="text-sm text-neutral-600 dark:text-neutral-400"
         >
-          Fill out the form below to generate a customized cat image.
+          {t('cats.createDescription')}
         </p>
 
         <div className="h-[350px] max-h-[350px] pl-2 pr-4 overflow-y-auto space-y-5">
@@ -56,7 +59,7 @@ export const CreateCatForm = () => {
           <Activity mode={text.length > 0 ? 'visible' : 'hidden'}>
             <fieldset className="border border-neutral-300 dark:border-neutral-700 rounded-lg p-4">
               <legend className="px-1 text-sm font-semibold">
-                Font Options
+                {t('cats.fontOptions')}
               </legend>
               <FieldInput {...fields.fontSize} />
               <FieldInput {...fields.fontColor} />
@@ -66,7 +69,7 @@ export const CreateCatForm = () => {
           <Activity mode={filter === 'custom' ? 'visible' : 'hidden'}>
             <fieldset className="border border-neutral-300 dark:border-neutral-700 rounded-lg p-4">
               <legend className="px-1 text-sm font-semibold">
-                Custom Filter Settings
+                {t('cats.customFilterSettings')}
               </legend>
 
               <FieldInput {...fields.brightness} />
@@ -77,7 +80,7 @@ export const CreateCatForm = () => {
         </div>
 
         {error?.name && (
-          <AlertError error={error.response?.data || 'Something went wrong'} />
+          <AlertError error={error.response?.data || t('cats.errorGeneric')} />
         )}
 
         <button
@@ -85,7 +88,7 @@ export const CreateCatForm = () => {
           disabled={isLoading}
           className="w-full py-2.5 rounded-lg bg-primary text-white font-semibold hover:bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
         >
-          {isLoading ? 'Creating...' : 'Create'}
+          {isLoading ? t('cats.creating') : t('cats.createButton')}
         </button>
       </form>
     </div>

@@ -1,8 +1,10 @@
 import { useGetCatDetails } from '../hooks/use-get-cat-details'
+import { useTranslation } from 'react-i18next'
 import type { IGetCatsResponse } from '../../core/domain/cats.types'
 
 export const Cat = ({ cat }: { cat: IGetCatsResponse[number] }) => {
   const catImageQuery = useGetCatDetails(cat.id)
+  const { t } = useTranslation('dashboard')
 
   if (catImageQuery.isFetching || !catImageQuery.data)
     return (
@@ -19,7 +21,7 @@ export const Cat = ({ cat }: { cat: IGetCatsResponse[number] }) => {
       />
 
       <div className="flex gap-2 items-center justify-between w-full mt-2">
-        <p className="text-lg font-bold">Tags:</p>
+        <p className="text-lg font-bold">{t('cats.tagsLabel')}</p>
         <div className="flex gap-2 items-center flex-wrap">
           {cat.tags.slice(0, 2).map((tag) => (
             <span
@@ -35,7 +37,7 @@ export const Cat = ({ cat }: { cat: IGetCatsResponse[number] }) => {
         </div>
 
         {cat.tags.length === 0 && (
-          <span className="italic text-gray-500">No tags</span>
+          <span className="italic text-gray-500">{t('cats.noTags')}</span>
         )}
       </div>
     </article>

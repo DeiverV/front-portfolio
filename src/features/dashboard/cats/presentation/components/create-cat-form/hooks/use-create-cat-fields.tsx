@@ -1,73 +1,75 @@
 import { useGetTags } from '../../../hooks/use-get-tags'
 import type { ICreateCatFormField } from '../create-cat-form.types'
+import { useTranslation } from 'react-i18next'
 
 export const useCreateCatFields = () => {
   const tagsQuery = useGetTags()
+  const { t } = useTranslation('dashboard')
 
   const fields: ICreateCatFormField = {
     text: {
       id: 'cat-text',
-      label: 'Cat Text',
+      label: t('cats.fields.text.label'),
       name: 'text',
-      placeholder: 'Say something...',
+      placeholder: t('cats.fields.text.placeholder'),
     },
     fontSize: {
       id: 'cat-font-size',
-      label: 'Font Size',
+      label: t('cats.fields.fontSize.label'),
       name: 'fontSize',
-      placeholder: '12',
+      placeholder: t('cats.fields.fontSize.placeholder'),
       type: 'number',
       min: 1,
     },
     fontColor: {
       id: 'cat-font-color',
-      label: 'Font Color',
+      label: t('cats.fields.fontColor.label'),
       name: 'fontColor',
-      placeholder: 'e.g. #ff9900 or red',
+      placeholder: t('cats.fields.fontColor.placeholder'),
     },
     filter: {
       id: 'cat-filter-select',
-      label: 'Filter',
+      label: t('cats.fields.filter.label'),
       name: 'filter',
       options: [
-        { value: '', label: 'None' },
-        { value: 'mono', label: 'Mono' },
-        { value: 'negate', label: 'Negate' },
-        { value: 'custom', label: 'Custom' },
+        { value: '', label: t('cats.fields.filter.options.none') },
+        { value: 'mono', label: t('cats.fields.filter.options.mono') },
+        { value: 'negate', label: t('cats.fields.filter.options.negate') },
+        { value: 'custom', label: t('cats.fields.filter.options.custom') },
       ],
     },
     brightness: {
       id: 'cat-brightness',
-      label: 'Brightness',
+      label: t('cats.fields.brightness.label'),
       name: 'brightness',
-      placeholder: '0-100',
+      placeholder: t('cats.fields.brightness.placeholder'),
       type: 'number',
       min: 0,
       max: 100,
     },
     lightness: {
       id: 'cat-lightness',
-      label: 'Lightness',
+      label: t('cats.fields.lightness.label'),
       name: 'lightness',
-      placeholder: '0-100',
+      placeholder: t('cats.fields.lightness.placeholder'),
       type: 'number',
       min: 0,
       max: 100,
     },
     saturation: {
       id: 'cat-saturation',
-      label: 'Saturation',
+      label: t('cats.fields.saturation.label'),
       name: 'saturation',
-      placeholder: '0-100',
+      placeholder: t('cats.fields.saturation.placeholder'),
       type: 'number',
       min: 0,
       max: 100,
     },
     tags: {
       id: 'cat-tags-select',
-      label: 'Tags',
+      label: t('cats.fields.tags.label'),
       name: 'tags',
-      helperText: 'Hold Ctrl/Command to select multiple',
+      helperText: t('cats.fields.tags.helperText'),
       options: tagsQuery.data?.map((tag) => ({ value: tag, label: tag })) || [],
       multiple: true,
       className:

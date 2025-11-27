@@ -29,6 +29,70 @@
       "sourceCodeText": "¡Mira el código de esta web!"
     }
   },
-  "dashboard": {},
+  "dashboard": {
+    "sidebar": {
+      "links": {
+        "linkedin": "LinkedIn",
+        "github": "Github",
+        "exchanges": "Exchanges",
+        "cats": "Gatos"
+      }
+    },
+    "linkedin": {
+      "recommendationsTitle": "Mis recomendaciones"
+    },
+    "cats": {
+      "title": "¡Gatos!",
+      "createTitle": "¡Crear un gato!",
+      "createDescription": "Rellena el formulario abajo para generar una imagen de gato personalizada.",
+      "createButton": "Crear gato",
+      "creating": "Creando...",
+      "loadingMore": "Cargando más...",
+      "fontOptions": "Opciones de fuente",
+      "customFilterSettings": "Ajustes personalizados de filtro",
+      "errorGeneric": "Algo salió mal",
+      "tagsLabel": "Etiquetas:",
+      "noTags": "Sin etiquetas",
+      "fields": {
+        "text": {
+          "label": "Texto del gato",
+          "placeholder": "Di algo..."
+        },
+        "fontSize": {
+          "label": "Tamaño de fuente",
+          "placeholder": "12"
+        },
+        "fontColor": {
+          "label": "Color de fuente",
+          "placeholder": "p.ej. #ff9900 o Rojo"
+        },
+        "filter": {
+          "label": "Filtro",
+          "options": {
+            "none": "Ninguno",
+            "mono": "Mono",
+            "negate": "Negativo",
+            "custom": "Personalizado"
+          }
+        },
+        "brightness": {
+          "label": "Brillo",
+          "placeholder": "0-100"
+        },
+        "lightness": {
+          "label": "Claridad",
+          "placeholder": "0-100"
+        },
+        "saturation": {
+          "label": "Saturación",
+          "placeholder": "0-100"
+        },
+        "tags": {
+          "label": "Etiquetas",
+          "helperText": "Mantén Ctrl/Command para seleccionar múltiples"
+        }
+      }
+    }
+  },
   "design-system": {}
 }

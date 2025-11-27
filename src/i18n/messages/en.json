@@ -5,7 +5,8 @@
     "primaryColor": "Primary Color",
     "borderRadius": "Border Radius",
     "workingOnThis": "Hello! I'm working on this right now",
-    "back": "Back"
+    "back": "Back",
+    "customizeStyles": "Customize styles"
   },
   "landing": {
     "hero": {
@@ -29,6 +30,70 @@
       "sourceCodeText": "Check out the code for this website!"
     }
   },
-  "dashboard": {},
+  "dashboard": {
+    "sidebar": {
+      "links": {
+        "linkedin": "LinkedIn",
+        "github": "Github",
+        "exchanges": "Exchanges",
+        "cats": "Cats"
+      }
+    },
+    "linkedin": {
+      "recommendationsTitle": "My Recommendations"
+    },
+    "cats": {
+      "title": "Cats!",
+      "createTitle": "Create a Cat!",
+      "createDescription": "Fill out the form below to generate a customized cat image.",
+      "createButton": "Create Cat",
+      "creating": "Creating...",
+      "loadingMore": "Loading more...",
+      "fontOptions": "Font Options",
+      "customFilterSettings": "Custom Filter Settings",
+      "errorGeneric": "Something went wrong",
+      "tagsLabel": "Tags:",
+      "noTags": "No tags",
+      "fields": {
+        "text": {
+          "label": "Cat Text",
+          "placeholder": "Say something..."
+        },
+        "fontSize": {
+          "label": "Font Size",
+          "placeholder": "12"
+        },
+        "fontColor": {
+          "label": "Font Color",
+          "placeholder": "e.g. #ff9900 or red"
+        },
+        "filter": {
+          "label": "Filter",
+          "options": {
+            "none": "None",
+            "mono": "Mono",
+            "negate": "Negate",
+            "custom": "Custom"
+          }
+        },
+        "brightness": {
+          "label": "Brightness",
+          "placeholder": "0-100"
+        },
+        "lightness": {
+          "label": "Lightness",
+          "placeholder": "0-100"
+        },
+        "saturation": {
+          "label": "Saturation",
+          "placeholder": "0-100"
+        },
+        "tags": {
+          "label": "Tags",
+          "helperText": "Hold Ctrl/Command to select multiple"
+        }
+      }
+    }
+  },
   "design-system": {}
 }

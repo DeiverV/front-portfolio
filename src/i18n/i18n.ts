@@ -22,6 +22,8 @@ i18n
   .init({
     fallbackLng: 'en',
     supportedLngs: ['en', 'es'],
+    // Allow dot notation to access nested keys inside namespaces
+    keySeparator: '.',
     resources: {
       es: { ...es },
       en: { ...en },
